@@ -1,0 +1,70 @@
+<!-- <script>
+    age=22;
+    name="raja";
+    document.write(age);
+    document.write("<br />");
+    document.write(name);
+    
+    document.write("<br />");
+
+</script>
+
+
+// work with web page
+<input type="text" value="search" id="k" />
+<script>
+
+    
+    k=document.getElementById("k");
+    // k.value="ok";
+    k.type="button";
+</script>
+
+// work with browser
+ <script>
+    //print();
+    window.location="hello.html";
+</script> -->
+
+<!-- <script>
+    document.write("<br />");
+
+    i=200;
+    function show(){
+        //i=320; //update the value of i
+        var i=320; //new variable i
+        document.write(i); // 320
+    }
+
+    show();
+    document.write("<br />");
+    document.write(i); // 320 //200 with var
+</script> -->
+
+<!-- <script>
+   // document.write("<br />");
+
+
+    const max=100;
+    // max=20;
+    document.write(max);
+</script> --> 
+
+<script>
+    document.write("<br />");
+
+
+    function show(){
+        i=parseInt(document.getElementById("f").value);
+        j=parseInt(document.getElementById("s").value);
+        r=i+j;
+        document.getElementById("k").innerText=r;
+    }
+</script>
+Fno : <input type="text" id="f" />
+<br />
+Sno : <input type="text" id="s" />
+<br />
+<input type="submit" value="Add" onclick="show()" />
+<br />
+<h1 id="k"> </h1>
