@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <jsp:include page="header.jsp"></jsp:include>
 
 <style>
@@ -26,8 +27,8 @@
           <h5 class="card-title text-center mb-5 fw-light fs-5">Sign In</h5>
           <form method="post" action="/login">
             <div class="form-floating mb-3">
-              <input type="text" name="username" class="form-control" id="floatingInput"
-                placeholder="name@example.com">
+              <input type="text" name="email" class="form-control" id="floatingInput"
+              placeholder="name@example.com">
               <label for="floatingInput">Email address</label>
             </div>
             <div class="form-floating mb-3">
@@ -43,10 +44,13 @@
             </div>
             <div class="d-grid">
               <button class="btn btn-primary btn-login text-uppercase fw-bold" type="submit">Sign
-                in</button>
-          
-              <c:if test="${param.error=='true'}">
+              in</button>
+
+              <c:if test="${output=='invalid'}">
                 <p style="color:red;">Invalid username or password!</p>
+              </c:if>
+              <c:if test="${output=='contact to admin'}">
+                <p style="color:red;">Account inactive. Contact admin.</p>
               </c:if>
             </div>
             <hr class="my-4">

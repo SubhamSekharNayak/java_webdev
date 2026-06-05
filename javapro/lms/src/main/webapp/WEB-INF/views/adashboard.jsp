@@ -1,4 +1,4 @@
-<jsp:include page="aheader.jsp" ></jsp:include>
+<jsp:include page="header.jsp" ></jsp:include>
 <% String name=(String)session.getAttribute("name"); %>
 <% String email=(String)session.getAttribute("email"); %>
 Admin Dashboard
